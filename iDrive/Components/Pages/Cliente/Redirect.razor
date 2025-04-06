@@ -1,0 +1,20 @@
+﻿@page "/Cliente"
+@inject NavigationManager Navigation;
+<h3>Redirect</h3>
+
+@code {
+	bool isLoggedIn = true;
+	
+	protected override void OnInitialized()
+	{
+		string paginaDestino = "/Cliente/Cadastro";
+
+		if (isLoggedIn)
+		{
+			paginaDestino = "/Cliente/Home";
+		}
+
+		Navigation.NavigateTo(paginaDestino);
+	}
+
+}
