@@ -1,9 +1,24 @@
 ﻿@page "/"
 @using LeafletForBlazor
 
-<h1>Mapa</h1>
+<h1>Solicite sua Viagem</h1>
 
-<RealTimeMap height="460px" width="620px"></RealTimeMap>
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Ponto de Partida</label>
+        <input class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Destino</label>
+        <input class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar Viagem</button>
+</form>
+<br/>
+
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5362490518874!2d-48.480276489860984!3d-1.452542298527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48da287e43c7d%3A0xccd140b213afadb4!2sMais%20Barato%20Supermercados%20(Alcindo%20Cacela)!5e0!3m2!1spt-BR!2sbr!4v1744056544829!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 @code {
     RealTimeMap.MapOptions options = new RealTimeMap.MapOptions()
