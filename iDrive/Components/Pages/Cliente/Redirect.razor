@@ -3,11 +3,11 @@
 <h3>Redirect</h3>
 
 @code {
-	bool isLoggedIn = true;
+	bool isLoggedIn = false;
 	
 	protected override void OnInitialized()
 	{
-		string paginaDestino = "/Cliente/Cadastro";
+		string paginaDestino = "/Cliente/Login";
 
 		if (isLoggedIn)
 		{
